@@ -9,8 +9,12 @@ angular.module('app')
 		data: {user : user, password: password},
 		headers: {'Content-Type': 'application/json'}
 		});	
-	}
+	},
 
+	this.reset = function(){
+    $scope.user = "";
+    $scope.password = "";
+}
 
 })
 .component('app', {

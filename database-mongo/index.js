@@ -14,8 +14,14 @@ db.once('open', function() {
 });
 
 var userSchema = mongoose.Schema({
-  user: String,
-  password: String
+  user: {
+        type: String,
+        required: true
+      },
+  password: {
+        type: String,
+        required: true
+      }
 });
 
 var User = mongoose.model('User', userSchema);

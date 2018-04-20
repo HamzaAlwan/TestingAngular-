@@ -1,11 +1,17 @@
 <div>
-  <div class="container-fluid">
+  <div class="container-fluid"><br><br>
  	 <center>
- 	 	<h1>Signin</h1>
-
- 	 	<input class="btn btn-default" type="text" name="FirstName" placeholder="Your User Name" ng-model="user"><br><br>
- 	 	<input class="btn btn-default" type="text" name="FirstName" placeholder="Your Password" ng-model="password"><br><br>
- 	 	<input class="btn btn-success" type="submit" value="Sign-in" ng-click='$ctrl.signIn(user, password)'><br>
+ 	 	<form>
+  <label>
+    <input id="in" type="text" ng-model="user" required />
+    <div class="label-text">User Name</div>
+  </label>
+  <label>
+    <input id="in" type="text" ng-model="password" required />
+    <div class="label-text">Password</div>
+  </label>
+  <button type="submit" ng-click='$ctrl.signIn(user, password); $ctrl.reset()'>Submit</button>
+</form>
 
  	 </center>
   </div>
