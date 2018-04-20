@@ -2,11 +2,11 @@ angular.module('app')
 .controller('AppCtrl', function($scope, $http) {
 
 
-	this.singIn = function(name, password){
+	this.signIn = function(user, password){
 		$http({
 		method: 'POST',
 		url: '/user',
-		data: {name : name, password: password},
+		data: {user : user, password: password},
 		headers: {'Content-Type': 'application/json'}
 		});	
 	}
